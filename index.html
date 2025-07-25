@@ -1,0 +1,97 @@
+<html>
+
+<head>
+    <title>Rubik Cube Game Online</title>
+    <meta name="description" content="A 3D Rubik's Cube game built using HTML, Three.js, and TypeScript.">
+    <meta name="keywords" content="Rubik's Cube, Three.js, WebGL, 3D, cube, game, online">
+    <meta property="og:title" content="Rubik Cube Game">
+    <meta property="og:description" content="A 3D Rubik's Cube game built using HTML, Three.js, and TypeScript.">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            position: fixed;
+            right: 5px;
+            bottom: 10px;
+            font-size: 18px;
+            font-weight: normal;
+            writing-mode: vertical-rl;
+        }
+
+        #container {
+            height: 100vh;
+            width: 100vw;
+        }
+
+        #status {
+            font-size: 18px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .status-item {
+            margin-left: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        #order-select {
+            outline: none;
+        }
+
+        #disorder {
+            width: 50px;
+            display: none;
+        }
+
+        #restore {
+            width: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container"></div>
+    <div id="status">
+        <h1>Rubik's Cube</h1>
+        <div class="status-item">
+            <label for="finish">Status: </label>
+            <span id="finish"></span>
+        </div>
+        <div class="status-item">
+            <label for="order-select">Order: </label>
+            <select id="order-select">
+                <option value="2">2</option>
+                <option value="3" selected>3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </div>
+        <div class="status-item">
+            <button id="restore">Restore</button>
+        </div>
+        <!-- Coming soon -->
+        <div class="status-item">
+            <button id="disorder">Scramble</button>
+        </div>
+    </div>
+    <script type="module" src="./out-tsc/src/index.js"></script>
+</body>
+
+</html>
